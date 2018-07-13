@@ -3,6 +3,9 @@ project(libssh C)
 # Required cmake version
 cmake_minimum_required(VERSION 2.8.5)
 
+include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
+conan_basic_setup()
+
 # global needed variables
 set(APPLICATION_NAME ${PROJECT_NAME})
 
@@ -179,4 +182,3 @@ else (WITH_INTERNAL_DOC)
 endif (WITH_INTERNAL_DOC)
 message(STATUS "Benchmarks: ${WITH_BENCHMARKS}")
 message(STATUS "********************************************")
-
